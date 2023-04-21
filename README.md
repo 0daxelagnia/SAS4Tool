@@ -5,7 +5,7 @@ SAS: Zombie Assault 4 profile editor.
 - Go to the steam official website
 - Log in
 - Click your profile picture
-- Copy the numbers ( Your steam ID ) after the /profiles/
+- Copy the numbers in the URL ( Your steam ID ) after the /profiles/
 - Paste your steam user ID in the "steam_user_id" key inside the config.json file.
 
 It should look like this:
