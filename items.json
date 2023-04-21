@@ -1,0 +1,2084 @@
+{
+    "weapon_info": {
+        "normal": {
+            "pistols": [
+                {
+                    "Name": "Trailblazer",
+                    "ID": 6
+                },
+                {
+                    "Name": "RIA 313",
+                    "ID": 9
+                },
+                {
+                    "Name": "Poison Claw",
+                    "ID": 16
+                },
+                {
+                    "Name": "CM 205",
+                    "ID": 21
+                },
+                {
+                    "Name": "HVM 001",
+                    "ID": 22
+                },
+                {
+                    "Name": "CM 202",
+                    "ID": 23
+                },
+                {
+                    "Name": "Ronson 45",
+                    "ID": 37
+                },
+                {
+                    "Name": "Sabre",
+                    "ID": 84
+                },
+                {
+                    "Name": "Mustang",
+                    "ID": 98
+                },
+                {
+                    "Name": "RIA 1010",
+                    "ID": 141
+                },
+                {
+                    "Name": "CM 225",
+                    "ID": 145
+                }
+            ],
+            "smg": [
+                {
+                    "Name": "RIA T7",
+                    "ID": 8
+                },
+                {
+                    "Name": "CM 307",
+                    "ID": 11
+                },
+                {
+                    "Name": "HVM 002",
+                    "ID": 17
+                },
+                {
+                    "Name": "Ronson 55",
+                    "ID": 19
+                },
+                {
+                    "Name": "CM 351 Sunflare",
+                    "ID": 24
+                },
+                {
+                    "Name": "RIA 7",
+                    "ID": 30
+                },
+                {
+                    "Name": "Phantom",
+                    "ID": 89
+                },
+                {
+                    "Name": "Z-2 LMP",
+                    "ID": 131
+                },
+                {
+                    "Name": "CM 330",
+                    "ID": 148
+                },
+                {
+                    "Name": "Ronson 50",
+                    "ID": 160
+                }
+            ],
+            "assault_rifle": [
+                {
+                    "Name": "CM 401 Planet Stormer",
+                    "ID": 7
+                },
+                {
+                    "Name": "Ronson 65-a",
+                    "ID": 10
+                },
+                {
+                    "Name": "Sub-light COM2",
+                    "ID": 12
+                },
+                {
+                    "Name": "RIA 20 Para",
+                    "ID": 14
+                },
+                {
+                    "Name": "CM Gigavolt",
+                    "ID": 15
+                },
+                {
+                    "Name": "Mixmaster",
+                    "ID": 26
+                },
+                {
+                    "Name": "Hard Thorn",
+                    "ID": 28
+                },
+                {
+                    "Name": "HVM 005 G-Class",
+                    "ID": 31
+                },
+                {
+                    "Name": "CM 451 Starburst",
+                    "ID": 36
+                },
+                {
+                    "Name": "RIA 20 Striker",
+                    "ID": 41
+                },
+                {
+                    "Name": "RIA 20 DSC",
+                    "ID": 72
+                },
+                {
+                    "Name": "Raptor",
+                    "ID": 90
+                },
+                {
+                    "Name": "Z-1 Assault",
+                    "ID": 130
+                },
+                {
+                    "Name": "CM 440 Titan",
+                    "ID": 146
+                },
+                {
+                    "Name": "Heartburn",
+                    "ID": 156
+                },
+                {
+                    "Name": "Ronson 70",
+                    "ID": 158
+                },
+                {
+                    "Name": "RIA Trident",
+                    "ID": 181
+                }
+            ],
+            "shotgun": [
+                {
+                    "Name": "Stripper",
+                    "ID": 13
+                },
+                {
+                    "Name": "RIA 30 Strikeforce",
+                    "ID": 29
+                },
+                {
+                    "Name": "HVM 004",
+                    "ID": 35
+                },
+                {
+                    "Name": "1887 Shockfield",
+                    "ID": 61
+                },
+                {
+                    "Name": "Shotlite Tempest",
+                    "ID": 159
+                }
+            ],
+            "sniper": [
+                {
+                    "Name": "HIKS S300",
+                    "ID": 39
+                },
+                {
+                    "Name": "RIA 50",
+                    "ID": 43
+                },
+                {
+                    "Name": "HIK Heavyshot Protector",
+                    "ID": 58
+                },
+                {
+                    "Name": "Hornet",
+                    "ID": 83
+                },
+                {
+                    "Name": "CM 800 Jupiter",
+                    "ID": 149
+                }
+            ],
+            "rocket_launcher": [
+                {
+                    "Name": "Gebirgskanone",
+                    "ID": 33
+                },
+                {
+                    "Name": "HVM MPG",
+                    "ID": 34
+                },
+                {
+                    "Name": "T-101 Feldhaubitz",
+                    "ID": 40
+                },
+                {
+                    "Name": "T-102 Jagdfaust",
+                    "ID": 44
+                },
+                {
+                    "Name": "Ronson Cryogenic Turret",
+                    "ID": 56
+                },
+                {
+                    "Name": "Teknoboom Flugk\u00f6rper",
+                    "ID": 62
+                },
+                {
+                    "Name": "ZombieMissileLauncher",
+                    "ID": 118
+                },
+                {
+                    "Name": "ZombieSeekingMissileLauncher",
+                    "ID": 119
+                },
+                {
+                    "Name": "ZombieTurretRocket",
+                    "ID": 123
+                },
+                {
+                    "Name": "Lone Star",
+                    "ID": 151
+                },
+                {
+                    "Name": "HIKS 3100",
+                    "ID": 153
+                },
+                {
+                    "Name": "Luftplatzen",
+                    "ID": 154
+                },
+                {
+                    "Name": "Torment",
+                    "ID": 189
+                },
+                {
+                    "Name": "T-189 MGL",
+                    "ID": 219
+                }
+            ],
+            "flame_thrower": [
+                {
+                    "Name": "Ronson WP Flamethrower",
+                    "ID": 18
+                }
+            ],
+            "lmg": [
+                {
+                    "Name": "CM 505",
+                    "ID": 20
+                },
+                {
+                    "Name": "Ronson LBM",
+                    "ID": 25
+                },
+                {
+                    "Name": "HVM 008",
+                    "ID": 38
+                },
+                {
+                    "Name": "HVM Heavy Machine Gun Sentry",
+                    "ID": 54
+                },
+                {
+                    "Name": "CM Zeus Exclusion Zone",
+                    "ID": 55
+                },
+                {
+                    "Name": "CM Supernova",
+                    "ID": 60
+                },
+                {
+                    "Name": "Supermarine",
+                    "ID": 114
+                },
+                {
+                    "Name": "ZombieMachineGun",
+                    "ID": 117
+                },
+                {
+                    "Name": "ZombieMinigun",
+                    "ID": 121
+                },
+                {
+                    "Name": "ZombieSmallTurret",
+                    "ID": 122
+                },
+                {
+                    "Name": "CM Zeus Child",
+                    "ID": 124
+                },
+                {
+                    "Name": "Z-5 Heavy",
+                    "ID": 129
+                },
+                {
+                    "Name": "CM Zeus Child",
+                    "ID": 140
+                },
+                {
+                    "Name": "RIA 40",
+                    "ID": 142
+                },
+                {
+                    "Name": "RIA T40",
+                    "ID": 143
+                },
+                {
+                    "Name": "RIA 45 Para",
+                    "ID": 144
+                },
+                {
+                    "Name": "CM 530 BabyCOM",
+                    "ID": 147
+                },
+                {
+                    "Name": "Tombstone",
+                    "ID": 150
+                },
+                {
+                    "Name": "Proposition",
+                    "ID": 152
+                },
+                {
+                    "Name": "HIKS M1000",
+                    "ID": 182
+                }
+            ],
+            "disk_thrower": [
+                {
+                    "Name": "Shredder",
+                    "ID": 157
+                },
+                {
+                    "Name": "Ricochet",
+                    "ID": 205
+                }
+            ],
+            "laser": [
+                {
+                    "Name": "Hotspot",
+                    "ID": 155
+                }
+            ]
+        },
+        "red": {
+            "pistols": [
+                {
+                    "Name": "Sabre",
+                    "ID": 67
+                },
+                {
+                    "Name": "Mustang",
+                    "ID": 68
+                },
+                {
+                    "Name": "CM 205",
+                    "ID": 70
+                },
+                {
+                    "Name": "CM 202",
+                    "ID": 75
+                },
+                {
+                    "Name": "Ronson 45",
+                    "ID": 77
+                },
+                {
+                    "Name": "HVM 001",
+                    "ID": 78
+                },
+                {
+                    "Name": "RIA 313",
+                    "ID": 110
+                },
+                {
+                    "Name": "Poison Claw",
+                    "ID": 111
+                },
+                {
+                    "Name": "Trailblazer",
+                    "ID": 116
+                },
+                {
+                    "Name": "RIA 1010",
+                    "ID": 161
+                },
+                {
+                    "Name": "CM 225",
+                    "ID": 165
+                }
+            ],
+            "smg": [
+                {
+                    "Name": "CM 351 Sunflare",
+                    "ID": 87
+                },
+                {
+                    "Name": "HVM 002",
+                    "ID": 94
+                },
+                {
+                    "Name": "RIA 7",
+                    "ID": 97
+                },
+                {
+                    "Name": "RIA T7",
+                    "ID": 103
+                },
+                {
+                    "Name": "Ronson 55",
+                    "ID": 105
+                },
+                {
+                    "Name": "Phantom",
+                    "ID": 106
+                },
+                {
+                    "Name": "CM 307",
+                    "ID": 113
+                },
+                {
+                    "Name": "CM 330",
+                    "ID": 168
+                },
+                {
+                    "Name": "Ronson 50",
+                    "ID": 180
+                }
+            ],
+            "assault_rifle": [
+                {
+                    "Name": "RIA 20 DSC",
+                    "ID": 69
+                },
+                {
+                    "Name": "CM 451 Starburst",
+                    "ID": 71
+                },
+                {
+                    "Name": "Mixmaster",
+                    "ID": 76
+                },
+                {
+                    "Name": "RIA 20 Para",
+                    "ID": 79
+                },
+                {
+                    "Name": "HVM 005 G-Class",
+                    "ID": 86
+                },
+                {
+                    "Name": "Raptor",
+                    "ID": 88
+                },
+                {
+                    "Name": "Sub-light COM2",
+                    "ID": 93
+                },
+                {
+                    "Name": "Hard Thorn",
+                    "ID": 99
+                },
+                {
+                    "Name": "Ronson 65-a",
+                    "ID": 100
+                },
+                {
+                    "Name": "RIA 20 Striker",
+                    "ID": 102
+                },
+                {
+                    "Name": "CM 401 Planet Stormer",
+                    "ID": 109
+                },
+                {
+                    "Name": "CM Gigavolt",
+                    "ID": 115
+                },
+                {
+                    "Name": "CM 440 Titan",
+                    "ID": 166
+                },
+                {
+                    "Name": "Heartburn",
+                    "ID": 176
+                },
+                {
+                    "Name": "Ronson 70",
+                    "ID": 178
+                }
+            ],
+            "shotgun": [
+                {
+                    "Name": "1887 Shockfield",
+                    "ID": 66
+                },
+                {
+                    "Name": "Stripper",
+                    "ID": 85
+                },
+                {
+                    "Name": "RIA 30 Strikeforce",
+                    "ID": 96
+                },
+                {
+                    "Name": "HVM 004",
+                    "ID": 101
+                },
+                {
+                    "Name": "Shotlite Tempest",
+                    "ID": 179
+                }
+            ],
+            "sniper": [
+                {
+                    "Name": "Hornet",
+                    "ID": 81
+                },
+                {
+                    "Name": "HIKS S300",
+                    "ID": 82
+                },
+                {
+                    "Name": "RIA 50",
+                    "ID": 107
+                },
+                {
+                    "Name": "HIK Heavyshot Protector",
+                    "ID": 135
+                },
+                {
+                    "Name": "CM 800 Jupiter",
+                    "ID": 169
+                }
+            ],
+            "rocket_launcher": [
+                {
+                    "Name": "HVM MPG",
+                    "ID": 73
+                },
+                {
+                    "Name": "Gebirgskanone",
+                    "ID": 91
+                },
+                {
+                    "Name": "T-102 Jagdfaust",
+                    "ID": 92
+                },
+                {
+                    "Name": "T-101 Feldhaubitz",
+                    "ID": 108
+                },
+                {
+                    "Name": "ZombieMissileLauncher",
+                    "ID": 126
+                },
+                {
+                    "Name": "ZombieSeekingMissileLauncher",
+                    "ID": 127
+                },
+                {
+                    "Name": "Ronson Cryogenic Turret",
+                    "ID": 134
+                },
+                {
+                    "Name": "Teknoboom Flugk\u00f6rper",
+                    "ID": 136
+                },
+                {
+                    "Name": "Lone Star",
+                    "ID": 171
+                },
+                {
+                    "Name": "HIKS 3100",
+                    "ID": 173
+                },
+                {
+                    "Name": "Luftplatzen",
+                    "ID": 174
+                },
+                {
+                    "Name": "CM X-1 Furie",
+                    "ID": 190
+                }
+            ],
+            "flame_thrower": [
+                {
+                    "Name": "Ronson WP Flamethrower",
+                    "ID": 74
+                },
+                {
+                    "Name": "ZombieFlameThrower",
+                    "ID": 128
+                },
+                {
+                    "Name": "Ronson MK V Flame Turret",
+                    "ID": 137
+                }
+            ],
+            "lmg": [
+                {
+                    "Name": "CM 505",
+                    "ID": 80
+                },
+                {
+                    "Name": "HVM 008",
+                    "ID": 95
+                },
+                {
+                    "Name": "Ronson LBM",
+                    "ID": 104
+                },
+                {
+                    "Name": "Supermarine",
+                    "ID": 112
+                },
+                {
+                    "Name": "ZombieMachineGun",
+                    "ID": 125
+                },
+                {
+                    "Name": "ZombieLargeTurret",
+                    "ID": 132
+                },
+                {
+                    "Name": "HVM Heavy Machine Gun Sentry",
+                    "ID": 133
+                },
+                {
+                    "Name": "CM Supernova",
+                    "ID": 138
+                },
+                {
+                    "Name": "CM Zeus Exclusion Zone",
+                    "ID": 139
+                },
+                {
+                    "Name": "RIA 40",
+                    "ID": 162
+                },
+                {
+                    "Name": "RIA T40",
+                    "ID": 163
+                },
+                {
+                    "Name": "RIA 45 Para",
+                    "ID": 164
+                },
+                {
+                    "Name": "CM 530 BabyCOM",
+                    "ID": 167
+                },
+                {
+                    "Name": "Tombstone",
+                    "ID": 170
+                },
+                {
+                    "Name": "Proposition",
+                    "ID": 172
+                }
+            ],
+            "disk_thrower": [
+                {
+                    "Name": "Shredder",
+                    "ID": 177
+                }
+            ],
+            "laser": [
+                {
+                    "Name": "Hotspot",
+                    "ID": 175
+                }
+            ]
+        },
+        "black": {
+            "pistols": [
+                {
+                    "Name": "Sabre",
+                    "ID": 10067
+                },
+                {
+                    "Name": "Mustang",
+                    "ID": 10068
+                },
+                {
+                    "Name": "CM 205",
+                    "ID": 10070
+                },
+                {
+                    "Name": "CM 202",
+                    "ID": 10075
+                },
+                {
+                    "Name": "Ronson 45",
+                    "ID": 10077
+                },
+                {
+                    "Name": "HVM 001",
+                    "ID": 10078
+                },
+                {
+                    "Name": "RIA 313",
+                    "ID": 10110
+                },
+                {
+                    "Name": "Poison Claw",
+                    "ID": 10111
+                },
+                {
+                    "Name": "Trailblazer",
+                    "ID": 10116
+                },
+                {
+                    "Name": "RIA 1010",
+                    "ID": 10161
+                },
+                {
+                    "Name": "CM 225",
+                    "ID": 10165
+                }
+            ],
+            "smg": [
+                {
+                    "Name": "CM 351 Sunflare",
+                    "ID": 10087
+                },
+                {
+                    "Name": "HVM 002",
+                    "ID": 10094
+                },
+                {
+                    "Name": "RIA 7",
+                    "ID": 10097
+                },
+                {
+                    "Name": "RIA T7",
+                    "ID": 10103
+                },
+                {
+                    "Name": "Ronson 55",
+                    "ID": 10105
+                },
+                {
+                    "Name": "Phantom",
+                    "ID": 10106
+                },
+                {
+                    "Name": "CM 307",
+                    "ID": 10113
+                },
+                {
+                    "Name": "CM 330",
+                    "ID": 10168
+                },
+                {
+                    "Name": "Ronson 50",
+                    "ID": 10180
+                }
+            ],
+            "assault_rifle": [
+                {
+                    "Name": "RIA 20 DSC",
+                    "ID": 10069
+                },
+                {
+                    "Name": "CM 451 Starburst",
+                    "ID": 10071
+                },
+                {
+                    "Name": "Mixmaster",
+                    "ID": 10076
+                },
+                {
+                    "Name": "RIA 20 Para",
+                    "ID": 10079
+                },
+                {
+                    "Name": "HVM 005 G-Class",
+                    "ID": 10086
+                },
+                {
+                    "Name": "Raptor",
+                    "ID": 10088
+                },
+                {
+                    "Name": "Sub-light COM2",
+                    "ID": 10093
+                },
+                {
+                    "Name": "Hard Thorn",
+                    "ID": 10099
+                },
+                {
+                    "Name": "Ronson 65-a",
+                    "ID": 10100
+                },
+                {
+                    "Name": "RIA 20 Striker",
+                    "ID": 10102
+                },
+                {
+                    "Name": "CM 401 Planet Stormer",
+                    "ID": 10109
+                },
+                {
+                    "Name": "CM Gigavolt",
+                    "ID": 10115
+                },
+                {
+                    "Name": "CM 440 Titan",
+                    "ID": 10166
+                },
+                {
+                    "Name": "Heartburn",
+                    "ID": 10176
+                },
+                {
+                    "Name": "Ronson 70",
+                    "ID": 10178
+                }
+            ],
+            "shotgun": [
+                {
+                    "Name": "1887 Shockfield",
+                    "ID": 10066
+                },
+                {
+                    "Name": "Stripper",
+                    "ID": 10085
+                },
+                {
+                    "Name": "RIA 30 Strikeforce",
+                    "ID": 10096
+                },
+                {
+                    "Name": "HVM 004",
+                    "ID": 10101
+                },
+                {
+                    "Name": "Shotlite Tempest",
+                    "ID": 10179
+                }
+            ],
+            "sniper": [
+                {
+                    "Name": "Hornet",
+                    "ID": 10081
+                },
+                {
+                    "Name": "HIKS S300",
+                    "ID": 10082
+                },
+                {
+                    "Name": "RIA 50",
+                    "ID": 10107
+                },
+                {
+                    "Name": "HIK Heavyshot Protector",
+                    "ID": 10135
+                },
+                {
+                    "Name": "CM 800 Jupiter",
+                    "ID": 10169
+                }
+            ],
+            "rocket_launcher": [
+                {
+                    "Name": "HVM MPG",
+                    "ID": 10073
+                },
+                {
+                    "Name": "Gebirgskanone",
+                    "ID": 10091
+                },
+                {
+                    "Name": "T-102 Jagdfaust",
+                    "ID": 10092
+                },
+                {
+                    "Name": "T-101 Feldhaubitz",
+                    "ID": 10108
+                },
+                {
+                    "Name": "ZombieMissileLauncher",
+                    "ID": 10126
+                },
+                {
+                    "Name": "ZombieSeekingMissileLauncher",
+                    "ID": 10127
+                },
+                {
+                    "Name": "Ronson Cryogenic Turret",
+                    "ID": 10134
+                },
+                {
+                    "Name": "Teknoboom Flugk\u00f6rper",
+                    "ID": 10136
+                },
+                {
+                    "Name": "Lone Star",
+                    "ID": 10171
+                },
+                {
+                    "Name": "HIKS 3100",
+                    "ID": 10173
+                },
+                {
+                    "Name": "Luftplatzen",
+                    "ID": 10174
+                },
+                {
+                    "Name": "CM X-1 Furie",
+                    "ID": 10190
+                }
+            ],
+            "flame_thrower": [
+                {
+                    "Name": "Ronson WP Flamethrower",
+                    "ID": 10074
+                },
+                {
+                    "Name": "ZombieFlameThrower",
+                    "ID": 10128
+                },
+                {
+                    "Name": "Ronson MK V Flame Turret",
+                    "ID": 10137
+                }
+            ],
+            "lmg": [
+                {
+                    "Name": "CM 505",
+                    "ID": 10080
+                },
+                {
+                    "Name": "HVM 008",
+                    "ID": 10095
+                },
+                {
+                    "Name": "Ronson LBM",
+                    "ID": 10104
+                },
+                {
+                    "Name": "Supermarine",
+                    "ID": 10112
+                },
+                {
+                    "Name": "ZombieMachineGun",
+                    "ID": 10125
+                },
+                {
+                    "Name": "ZombieLargeTurret",
+                    "ID": 10132
+                },
+                {
+                    "Name": "HVM Heavy Machine Gun Sentry",
+                    "ID": 10133
+                },
+                {
+                    "Name": "CM Supernova",
+                    "ID": 10138
+                },
+                {
+                    "Name": "CM Zeus Exclusion Zone",
+                    "ID": 10139
+                },
+                {
+                    "Name": "RIA 40",
+                    "ID": 10162
+                },
+                {
+                    "Name": "RIA T40",
+                    "ID": 10163
+                },
+                {
+                    "Name": "RIA 45 Para",
+                    "ID": 10164
+                },
+                {
+                    "Name": "CM 530 BabyCOM",
+                    "ID": 10167
+                },
+                {
+                    "Name": "Tombstone",
+                    "ID": 10170
+                },
+                {
+                    "Name": "Proposition",
+                    "ID": 10172
+                }
+            ],
+            "disk_thrower": [
+                {
+                    "Name": "Shredder",
+                    "ID": 10177
+                }
+            ],
+            "laser": [
+                {
+                    "Name": "Hotspot",
+                    "ID": 10175
+                }
+            ]
+        },
+        "factions":{
+            "pistols": [
+                {
+                    "Name": "GG17",
+                    "ID": 221
+                }
+            ],
+            "assault_rifle":[
+                {
+                    "Name": "Festungsbrecher",
+                    "ID": 222
+                }
+            ],
+            "shotgun": [
+                {
+                    "Name": "Thundershock",
+                    "ID": 231
+                }
+            ],
+            "rocket_launcher": [
+                {
+                    "Name": "Depth Charge",
+                    "ID": 228
+                },
+                {
+                    "Name": "Havoc",
+                    "ID": 224
+                }
+            ],
+            "flame_thrower": [
+                {
+                    "Name": "Avalanche",
+                    "ID": 227
+                },
+                {
+                    "Name": "Phoenix",
+                    "ID": 223
+                }
+            ],
+            "lmg": [
+                {
+                    "Name": "Kraken",
+                    "ID": 225
+                }
+            ],
+            "disk_thrower": [
+                {
+                    "Name": "Exterminator",
+                    "ID": 226
+                }
+            ],
+            "laser": [
+                {
+                    "Name": "Krakatoa",
+                    "ID": 229
+                }
+            ]
+        }
+    },
+    "equipment_info": {
+        "normal": {
+            "helmet": [
+                {
+                    "Name": "Graphene Combat Hood",
+                    "ID": 99
+                },
+                {
+                    "Name": "R1 Interceptor Helm",
+                    "ID": 106
+                },
+                {
+                    "Name": "Special Forces Helmet",
+                    "ID": 107
+                },
+                {
+                    "Name": "Trooper Helmet",
+                    "ID": 110
+                },
+                {
+                    "Name": "Titan IRN HUD",
+                    "ID": 119
+                },
+                {
+                    "Name": "HVM Kevlar Helmet",
+                    "ID": 125
+                },
+                {
+                    "Name": "Shotlite Hummingbird H1",
+                    "ID": 165
+                },
+                {
+                    "Name": "Hardplate Helm",
+                    "ID": 173
+                },
+                {
+                    "Name": "HVM Carbon Fibre Helmet",
+                    "ID": 184
+                },
+                {
+                    "Name": "Medusa Helmet",
+                    "ID": 194
+                },
+                {
+                    "Name": "Dragonfly Helmet",
+                    "ID": 206
+                },
+                {
+                    "Name": "template-DONTSPAWN",
+                    "ID": 216
+                }
+            ],
+            "vest": [
+                {
+                    "Name": "Special Forces Vest",
+                    "ID": 100
+                },
+                {
+                    "Name": "HVM Kevlar Vest",
+                    "ID": 101
+                },
+                {
+                    "Name": "Trooper Vest",
+                    "ID": 104
+                },
+                {
+                    "Name": "Rubicon Power Assist",
+                    "ID": 105
+                },
+                {
+                    "Name": "Heavy Trooper Vest",
+                    "ID": 112
+                },
+                {
+                    "Name": "Graphene Body Suit Top",
+                    "ID": 115
+                },
+                {
+                    "Name": "R4 Guardian Vest",
+                    "ID": 118
+                },
+                {
+                    "Name": "Titan Teslashock",
+                    "ID": 123
+                },
+                {
+                    "Name": "Shotlite Hummingbird V1",
+                    "ID": 168
+                },
+                {
+                    "Name": "Hardplate Chest",
+                    "ID": 176
+                },
+                {
+                    "Name": "HVM Carbon Fibre Vest",
+                    "ID": 186
+                },
+                {
+                    "Name": "Medusa Vest",
+                    "ID": 196
+                },
+                {
+                    "Name": "Dragonfly Vest",
+                    "ID": 208
+                }
+            ],
+            "gloves": [
+                {
+                    "Name": "HVM Kevlar Gloves",
+                    "ID": 98
+                },
+                {
+                    "Name": "Trooper Gloves",
+                    "ID": 102
+                },
+                {
+                    "Name": "Titan IDS 01",
+                    "ID": 111
+                },
+                {
+                    "Name": "Graphene Gloves",
+                    "ID": 113
+                },
+                {
+                    "Name": "R6 Flamejuggler Gloves",
+                    "ID": 117
+                },
+                {
+                    "Name": "Special Forces Gloves",
+                    "ID": 128
+                },
+                {
+                    "Name": "Shotlite Hummingbird G1",
+                    "ID": 151
+                },
+                {
+                    "Name": "Hardplate Gauntlets",
+                    "ID": 180
+                },
+                {
+                    "Name": "HVM Carbon Fibre Gloves",
+                    "ID": 190
+                },
+                {
+                    "Name": "Medusa Gloves",
+                    "ID": 200
+                },
+                {
+                    "Name": "Dragonfly Gloves",
+                    "ID": 212
+                }
+            ],
+            "pants": [
+                {
+                    "Name": "HVM Kevlar Pants",
+                    "ID": 108
+                },
+                {
+                    "Name": "R7 Guardian Pants",
+                    "ID": 120
+                },
+                {
+                    "Name": "Titan MEM Trooper",
+                    "ID": 121
+                },
+                {
+                    "Name": "Special Forces Pants",
+                    "ID": 126
+                },
+                {
+                    "Name": "Graphene Body Suit Bottom",
+                    "ID": 127
+                },
+                {
+                    "Name": "Trooper Pants",
+                    "ID": 129
+                },
+                {
+                    "Name": "Shotlite Hummingbird P1",
+                    "ID": 169
+                },
+                {
+                    "Name": "Hardplate Leg Protection",
+                    "ID": 178
+                },
+                {
+                    "Name": "HVM Carbon Fibre Pants",
+                    "ID": 188
+                },
+                {
+                    "Name": "Medusa Pants",
+                    "ID": 198
+                },
+                {
+                    "Name": "Dragonfly Pants",
+                    "ID": 210
+                }
+            ],
+            "boots": [
+                {
+                    "Name": "Graphene Boots",
+                    "ID": 103
+                },
+                {
+                    "Name": "Trooper Boots",
+                    "ID": 109
+                },
+                {
+                    "Name": "HVM Combat Boots",
+                    "ID": 114
+                },
+                {
+                    "Name": "Special Forces Boots",
+                    "ID": 116
+                },
+                {
+                    "Name": "R8 Huntsman Boots",
+                    "ID": 122
+                },
+                {
+                    "Name": "Titan MEM Sprint",
+                    "ID": 124
+                },
+                {
+                    "Name": "Shotlite Starwalk Boots",
+                    "ID": 144
+                },
+                {
+                    "Name": "Hardplate Boots",
+                    "ID": 182
+                },
+                {
+                    "Name": "HVM Carbon Fibre Boots",
+                    "ID": 192
+                },
+                {
+                    "Name": "Medusa Boots",
+                    "ID": 202
+                },
+                {
+                    "Name": "Dragonfly Boots",
+                    "ID": 214
+                }
+            ]
+        },
+        "red": {
+            "helmet": [
+                {
+                    "Name": "Titan IRN HUD",
+                    "ID": 130
+                },
+                {
+                    "Name": "R1 Interceptor Helm",
+                    "ID": 136
+                },
+                {
+                    "Name": "Graphene Combat Hood",
+                    "ID": 139
+                },
+                {
+                    "Name": "Special Forces Helmet",
+                    "ID": 143
+                },
+                {
+                    "Name": "HVM Kevlar Helmet",
+                    "ID": 155
+                },
+                {
+                    "Name": "Shotlite Hummingbird H1",
+                    "ID": 158
+                },
+                {
+                    "Name": "Trooper Helmet",
+                    "ID": 162
+                },
+                {
+                    "Name": "Hardplate Helm",
+                    "ID": 175
+                },
+                {
+                    "Name": "HVM Carbon Fibre Helmet",
+                    "ID": 185
+                },
+                {
+                    "Name": "Medusa Helmet",
+                    "ID": 195
+                },
+                {
+                    "Name": "Dragonfly Helmet",
+                    "ID": 207
+                }
+            ],
+            "vest": [
+                {
+                    "Name": "Rubicon Power Assist",
+                    "ID": 137
+                },
+                {
+                    "Name": "R4 Guardian Vest",
+                    "ID": 141
+                },
+                {
+                    "Name": "HVM Kevlar Vest",
+                    "ID": 142
+                },
+                {
+                    "Name": "Trooper Vest",
+                    "ID": 148
+                },
+                {
+                    "Name": "Special Forces Vest",
+                    "ID": 154
+                },
+                {
+                    "Name": "Shotlite Hummingbird V1",
+                    "ID": 156
+                },
+                {
+                    "Name": "Titan Teslashock",
+                    "ID": 157
+                },
+                {
+                    "Name": "Graphene Body Suit Top",
+                    "ID": 161
+                },
+                {
+                    "Name": "Heavy Trooper Vest",
+                    "ID": 164
+                },
+                {
+                    "Name": "Hardplate Chest",
+                    "ID": 177
+                },
+                {
+                    "Name": "HVM Carbon Fibre Vest",
+                    "ID": 187
+                },
+                {
+                    "Name": "Medusa Vest",
+                    "ID": 197
+                },
+                {
+                    "Name": "Dragonfly Vest",
+                    "ID": 209
+                }
+            ],
+            "gloves": [
+                {
+                    "Name": "Special Forces Gloves",
+                    "ID": 132
+                },
+                {
+                    "Name": "Trooper Gloves",
+                    "ID": 133
+                },
+                {
+                    "Name": "Graphene Gloves",
+                    "ID": 134
+                },
+                {
+                    "Name": "Titan IDS 01",
+                    "ID": 135
+                },
+                {
+                    "Name": "Shotlite Hummingbird G1",
+                    "ID": 145
+                },
+                {
+                    "Name": "HVM Kevlar Gloves",
+                    "ID": 146
+                },
+                {
+                    "Name": "R6 Flamejuggler Gloves",
+                    "ID": 159
+                },
+                {
+                    "Name": "Hardplate Gauntlets",
+                    "ID": 181
+                },
+                {
+                    "Name": "HVM Carbon Fibre Gloves",
+                    "ID": 191
+                },
+                {
+                    "Name": "Medusa Gloves",
+                    "ID": 201
+                },
+                {
+                    "Name": "Dragonfly Gloves",
+                    "ID": 213
+                }
+            ],
+            "pants": [
+                {
+                    "Name": "R7 Guardian Pants",
+                    "ID": 138
+                },
+                {
+                    "Name": "HVM Kevlar Pants",
+                    "ID": 147
+                },
+                {
+                    "Name": "Special Forces Pants",
+                    "ID": 152
+                },
+                {
+                    "Name": "Shotlite Hummingbird P1",
+                    "ID": 153
+                },
+                {
+                    "Name": "Graphene Body Suit Bottom",
+                    "ID": 163
+                },
+                {
+                    "Name": "Trooper Pants",
+                    "ID": 166
+                },
+                {
+                    "Name": "Titan MEM Trooper",
+                    "ID": 171
+                },
+                {
+                    "Name": "Hardplate Leg Protection",
+                    "ID": 179
+                },
+                {
+                    "Name": "HVM Carbon Fibre Pants",
+                    "ID": 189
+                },
+                {
+                    "Name": "Medusa Pants",
+                    "ID": 199
+                },
+                {
+                    "Name": "Dragonfly Pants",
+                    "ID": 211
+                }
+            ],
+            "boots": [
+                {
+                    "Name": "HVM Combat Boots",
+                    "ID": 131
+                },
+                {
+                    "Name": "R8 Huntsman Boots",
+                    "ID": 140
+                },
+                {
+                    "Name": "Special Forces Boots",
+                    "ID": 149
+                },
+                {
+                    "Name": "Shotlite Starwalk Boots",
+                    "ID": 150
+                },
+                {
+                    "Name": "Trooper Boots",
+                    "ID": 160
+                },
+                {
+                    "Name": "Titan MEM Sprint",
+                    "ID": 167
+                },
+                {
+                    "Name": "Graphene Boots",
+                    "ID": 170
+                },
+                {
+                    "Name": "Hardplate Boots",
+                    "ID": 183
+                },
+                {
+                    "Name": "HVM Carbon Fibre Boots",
+                    "ID": 193
+                },
+                {
+                    "Name": "Medusa Boots",
+                    "ID": 205
+                },
+                {
+                    "Name": "Dragonfly Boots",
+                    "ID": 215
+                }
+            ]
+        },
+        "black": {
+            "helmet": [
+                {
+                    "Name": "Titan IRN HUD",
+                    "ID": 10130
+                },
+                {
+                    "Name": "R1 Interceptor Helm",
+                    "ID": 10136
+                },
+                {
+                    "Name": "Graphene Combat Hood",
+                    "ID": 10139
+                },
+                {
+                    "Name": "Special Forces Helmet",
+                    "ID": 10143
+                },
+                {
+                    "Name": "HVM Kevlar Helmet",
+                    "ID": 10155
+                },
+                {
+                    "Name": "Shotlite Hummingbird H1",
+                    "ID": 10158
+                },
+                {
+                    "Name": "Trooper Helmet",
+                    "ID": 10162
+                },
+                {
+                    "Name": "Hardplate Helm",
+                    "ID": 10175
+                },
+                {
+                    "Name": "HVM Carbon Fibre Helmet",
+                    "ID": 10185
+                },
+                {
+                    "Name": "Medusa Helmet",
+                    "ID": 10195
+                },
+                {
+                    "Name": "Dragonfly Helmet",
+                    "ID": 10207
+                }
+            ],
+            "vest": [
+                {
+                    "Name": "Rubicon Power Assist",
+                    "ID": 10137
+                },
+                {
+                    "Name": "R4 Guardian Vest",
+                    "ID": 10141
+                },
+                {
+                    "Name": "HVM Kevlar Vest",
+                    "ID": 10142
+                },
+                {
+                    "Name": "Trooper Vest",
+                    "ID": 10148
+                },
+                {
+                    "Name": "Special Forces Vest",
+                    "ID": 10154
+                },
+                {
+                    "Name": "Shotlite Hummingbird V1",
+                    "ID": 10156
+                },
+                {
+                    "Name": "Titan Teslashock",
+                    "ID": 10157
+                },
+                {
+                    "Name": "Graphene Body Suit Top",
+                    "ID": 10161
+                },
+                {
+                    "Name": "Heavy Trooper Vest",
+                    "ID": 10164
+                },
+                {
+                    "Name": "Hardplate Chest",
+                    "ID": 10177
+                },
+                {
+                    "Name": "HVM Carbon Fibre Vest",
+                    "ID": 10187
+                },
+                {
+                    "Name": "Medusa Vest",
+                    "ID": 10197
+                },
+                {
+                    "Name": "Dragonfly Vest",
+                    "ID": 10209
+                }
+            ],
+            "gloves": [
+                {
+                    "Name": "Special Forces Gloves",
+                    "ID": 10132
+                },
+                {
+                    "Name": "Trooper Gloves",
+                    "ID": 10133
+                },
+                {
+                    "Name": "Graphene Gloves",
+                    "ID": 10134
+                },
+                {
+                    "Name": "Titan IDS 01",
+                    "ID": 10135
+                },
+                {
+                    "Name": "Shotlite Hummingbird G1",
+                    "ID": 10145
+                },
+                {
+                    "Name": "HVM Kevlar Gloves",
+                    "ID": 10146
+                },
+                {
+                    "Name": "R6 Flamejuggler Gloves",
+                    "ID": 10159
+                },
+                {
+                    "Name": "Hardplate Gauntlets",
+                    "ID": 10181
+                },
+                {
+                    "Name": "HVM Carbon Fibre Gloves",
+                    "ID": 10191
+                },
+                {
+                    "Name": "Medusa Gloves",
+                    "ID": 10201
+                },
+                {
+                    "Name": "Dragonfly Gloves",
+                    "ID": 10213
+                }
+            ],
+            "pants": [
+                {
+                    "Name": "R7 Guardian Pants",
+                    "ID": 10138
+                },
+                {
+                    "Name": "HVM Kevlar Pants",
+                    "ID": 10147
+                },
+                {
+                    "Name": "Special Forces Pants",
+                    "ID": 10152
+                },
+                {
+                    "Name": "Shotlite Hummingbird P1",
+                    "ID": 10153
+                },
+                {
+                    "Name": "Graphene Body Suit Bottom",
+                    "ID": 10163
+                },
+                {
+                    "Name": "Trooper Pants",
+                    "ID": 10166
+                },
+                {
+                    "Name": "Titan MEM Trooper",
+                    "ID": 10171
+                },
+                {
+                    "Name": "Hardplate Leg Protection",
+                    "ID": 10179
+                },
+                {
+                    "Name": "HVM Carbon Fibre Pants",
+                    "ID": 10189
+                },
+                {
+                    "Name": "Medusa Pants",
+                    "ID": 10199
+                },
+                {
+                    "Name": "Dragonfly Pants",
+                    "ID": 10211
+                }
+            ],
+            "boots": [
+                {
+                    "Name": "HVM Combat Boots",
+                    "ID": 10131
+                },
+                {
+                    "Name": "R8 Huntsman Boots",
+                    "ID": 10140
+                },
+                {
+                    "Name": "Special Forces Boots",
+                    "ID": 10149
+                },
+                {
+                    "Name": "Shotlite Starwalk Boots",
+                    "ID": 10150
+                },
+                {
+                    "Name": "Trooper Boots",
+                    "ID": 10160
+                },
+                {
+                    "Name": "Titan MEM Sprint",
+                    "ID": 10167
+                },
+                {
+                    "Name": "Graphene Boots",
+                    "ID": 10170
+                },
+                {
+                    "Name": "Hardplate Boots",
+                    "ID": 10183
+                },
+                {
+                    "Name": "HVM Carbon Fibre Boots",
+                    "ID": 10193
+                },
+                {
+                    "Name": "Medusa Boots",
+                    "ID": 10205
+                },
+                {
+                    "Name": "Dragonfly Boots",
+                    "ID": 10215
+                }
+            ]
+        },
+        "factions": {
+            "helmet": [
+                {
+                    "Name": "Mako Helmet",
+                    "ID": 222
+                },
+                {
+                    "Name": "Overwatch Helmet",
+                    "ID": 227
+                },
+                {
+                    "Name": "Dynamo Helmet",
+                    "ID": 232
+                },
+                {
+                    "Name": "Vulkan Helmet",
+                    "ID": 217
+                }
+            ],
+            "vest": [
+                {
+                    "Name": "Mako Vest",
+                    "ID": 223
+                },
+                {
+                    "Name": "Overwatch Chest",
+                    "ID": 228
+                },
+                {
+                    "Name": "Dynamo Chest",
+                    "ID": 233
+                },
+                {
+                    "Name": "Vulkan Chest",
+                    "ID": 218
+                }
+            ],
+            "gloves": [
+                {
+                    "Name": "Mako Gloves",
+                    "ID": 225
+                },
+                {
+                    "Name": "Overwatch Gloves",
+                    "ID": 230
+                },
+                {
+                    "Name": "Dynamo Gloves",
+                    "ID": 235
+                },
+                {
+                    "Name": "Vulkan Gloves",
+                    "ID": 220
+                }
+            ],
+            "pants": [
+                {
+                    "Name": "Mako Pants",
+                    "ID": 224
+                },
+                {
+                    "Name": "Overwatch Pants",
+                    "ID": 229
+                },
+                {
+                    "Name": "Dynamo Legs",
+                    "ID": 234
+                },
+                {
+                    "Name": "Vulkan Pants",
+                    "ID": 219
+                }
+            ],
+            "boots": [{}]
+        }
+    },
+    "turret_info": {
+        "normal": [
+            {
+                "Name":"Ronson Cryogenic Turret",
+                "ID":56
+            },
+            {
+                "Name":"HIK Heavyshot Protector",
+                "ID":58
+            },
+            {
+                "Name":"Teknoboom Flugkorper",
+                "ID":62
+            },
+            {
+                "Name":"Ronson MK V Flame Turret",
+                "ID":63
+            },
+            {
+                "Name":"CM Supernova",
+                "ID":60
+            },
+            {
+                "Name":"CM Zeus Exclusion Zone",
+                "ID":55
+            }
+        ],
+        "red": [
+            {
+                "Name":"HVM Heavy Machine Gun Sentry",
+                "ID":133
+            },
+            {
+                "Name":"Ronson Cryogenic Turret",
+                "ID":134
+            },
+            {
+                "Name":"HIK Heavyshot Protector",
+                "ID":135
+            },
+            {
+                "Name":"Teknoboom Flugkorper",
+                "ID":136
+            },
+            {
+                "Name":"Ronson MK V Flame Turret",
+                "ID":137
+            },
+            {
+                "Name":"CM Supernova",
+                "ID":138
+            },
+            {
+                "Name":"CM Zeus Exclusion Zone",
+                "ID":139
+            }
+        ]
+    },
+    "premium_info": [
+        {
+            "Name":"Handkanone",
+            "ID":194,
+            "Type":1
+        },
+        {
+            "Name":"RIA 15 SE",
+            "ID":188,
+            "Type":2
+        },
+        {
+            "Name":"RIA 8A",
+            "ID":201,
+            "Type":2
+        },
+        {
+            "Name":"Ahab",
+            "ID":214,
+            "Type":5
+        },
+        {
+            "Name":"Banshee",
+            "ID":213,
+            "Type":2
+        },
+        {
+            "Name":"Bayonet",
+            "ID":206,
+            "Type":3
+        },
+        {
+            "Name":"Calamity",
+            "ID":217,
+            "Type":4
+        },
+        {
+            "Name":"CM 000 Kelvin",
+            "ID":198,
+            "Type":3
+        },
+        {
+            "Name":"CM 352 Quasar ",
+            "ID":204,
+            "Type":3
+        },
+        {
+            "Name":"CM 369 Starfury",
+            "ID":218,
+            "Type":2
+        },
+        {
+            "Name":"CM 467",
+            "ID":203,
+            "Type":2
+        },
+        {
+            "Name":"CM 505 Alpha Ltd. Edition",
+            "ID":195,
+            "Type":9
+        },
+        {
+            "Name":"CM Laser Drill",
+            "ID":202,
+            "Type":11
+        },
+        {
+            "Name":"CM Proton Arc",
+            "ID":212,
+            "Type":11
+        },
+        {
+            "Name":"Contagion",
+            "ID":216,
+            "Type":9
+        },
+        {
+            "Name":"Donderbus",
+            "ID":187,
+            "Type":4
+        },
+        {
+            "Name":"HIKS 888 CAW",
+            "ID":208,
+            "Type":5
+        },
+        {
+            "Name":"HIKS A10",
+            "ID":186,
+            "Type":3
+        },
+        {
+            "Name":"HIKS S4000",
+            "ID":196,
+            "Type":6
+        },
+        {
+            "Name":"Planet Stormer Ltd Edition",
+            "ID":184,
+            "Type":3
+        },
+        {
+            "Name":"RIA 75",
+            "ID":207,
+            "Type":5
+        },
+        {
+            "Name":"Ricochet",
+            "ID":205,
+            "Type":10
+        },
+        {
+            "Name":"Ronson 5X5",
+            "ID":199,
+            "Type":4
+        },
+        {
+            "Name":"Ronson WPX Incinerator",
+            "ID":185,
+            "Type":8
+        },
+        {
+            "Name":"Supermarine Alpha Ltd Edition",
+            "ID":200,
+            "Type":9
+        },
+        {
+            "Name":"Vitriol",
+            "ID":197,
+            "Type":6
+        },
+        {
+            "Name":"Zerfallen",
+            "ID":211,
+            "Type":6
+        }
+    ]
+}
