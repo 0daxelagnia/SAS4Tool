@@ -1,4 +1,4 @@
-from _utils_ import option_generator, menu, import_save, create_backup, export_save, print_menu, check_int, return_mapped_guns, return_mapped_gun_names, return_gun_category_name, get_input, gun_map, gunStrongbox, gun_map_factions, equipStrongbox, equip_map
+from _utils_ import option_generator, menu, import_save, create_backup, export_save, print_menu, check_int, get_input, gun_map, gunStrongbox, gun_map_factions, equipStrongbox, equip_map
 import json
 from colorama import Fore, init
 import random
@@ -48,6 +48,8 @@ def set_all_collections(rewards: bool):
     create_backup()
     for i in range(len(data['CollectionArrayWeapon'])):
         data['CollectionArrayWeapon'][i]['CollectionUnlocked'] = True
+    for i in range(len(data['CollectionArrayArmour'])):
+        data['CollectionArrayArmour'][i]['CollectionUnlocked'] = True
     for i in data['CollectionRewards']:
         data['CollectionRewards'][i] = rewards
     export_save(data=data)
@@ -76,7 +78,7 @@ def mp_stats_menu():
 
 def set_mp_stats(stat_type: str):
     print_menu(menu_dict={}, menu_type=0)
-    amount = check_int(input('Set stat amount\n\n[ > ] '))
+    amount = check_int(int(input('Set stat amount\n\n[ > ] ')))
     data = import_save()
     create_backup()
     for i in data['Inventory'][profile]['StatsData']:
@@ -137,7 +139,7 @@ def set_free_skill_reset():
 def set_profile_level():
     print_menu(menu_dict={}, menu_type=0)
     xp_array = [0,1071,1288,1655,2176,2855,3696,4704,5883,7237,8770,10486,12390,14486,16778,19270,21966,24871,27989,31324,34880,38661,42672,46917,51400,56125,91145,98978,107193,115797,124795,134195,144002,154222,164863,175930,187430,199368,211752,224587,237880,251637,265865,280569,295756,311433,327605,344279,361461,379158,397375,416120,435398,455215,475579,496495,517970,540009,562620,585808,609580,844923,878201,912282,947176,982890,1019433,1056813,1095038,1134118,1174060,1214873,1256565,1299144,1342620,1387000,1432293,1478507,1525650,1573732,1622760,1672743,1723689,1775606,1828504,1882390,1937273,1993161,2050062,2107986,2166940,3339899,3431459,3524603,3619342,3715690,3813659,3913262,4014512,4117420]
-    level = check_int(input('Set new level\n\n[ > ] '))
+    level = check_int(int(input('Set new level\n\n[ > ] ')))
     total_xp = sum(xp_array[:level])
     data = import_save()
     create_backup()
@@ -148,7 +150,7 @@ def set_profile_level():
 
 def set_black_strongboxes():
     print_menu(menu_dict={}, menu_type=0)
-    amount = check_int(input('Set amount of black strongboxes\n\n[ > ] '))
+    amount = check_int(int(input('Set amount of black strongboxes\n\n[ > ] ')))
     strongboxes_amount = [random.randint(10000000, 999999999) for _ in range(amount)]
     data = import_save()
     create_backup()
@@ -161,7 +163,7 @@ def set_random_stronboxes():
 
 def set_black_keys():
     print_menu(menu_dict={}, menu_type=0)
-    amount = check_int(input('Set amount of black keys\n\n[ > ] '))
+    amount = check_int(int(input('Set amount of black keys\n\n[ > ] ')))
     data = import_save()
     create_backup()
     data['Inventory'][profile]['Skills']['AvailableBlackKeys'] = amount
@@ -170,7 +172,7 @@ def set_black_keys():
 
 def set_aug_cores():
     print_menu(menu_dict={}, menu_type=0)
-    amount = check_int(input('Set amount of augment cores\n\n[ > ] '))
+    amount = check_int(int(input('Set amount of augment cores\n\n[ > ] ')))
     data = import_save()
     create_backup()
     data['Inventory'][profile]['Skills']['AvailableEliteAugmentCores'] = amount
@@ -178,19 +180,21 @@ def set_aug_cores():
     return 0
 
 def set_grenades(grenade_type: str):
+    print_menu(menu_dict={}, menu_type=0)
     data = import_save()
-    amount = check_int(input(f'Set amount of grenades\n\n[ > ] '))
+    amount = check_int(int(input(f'Set amount of grenades\n\n[ > ] ')))
     create_backup()
     data['Inventory'][profile]['Ammo'][grenade_type] = amount
     export_save(data=data)
     return 0
 
 def set_turrets():
+    print_menu(menu_dict={}, menu_type=0)
     options = []
     options_parent = []
-    
+
     data = import_save()
-    amount = check_int(input('Set amount of turrets\n\n[ > ] '))
+    amount = check_int(int(input('Set amount of turrets\n\n[ > ] ')))
     create_backup()
     profile_level = int(data['Inventory'][profile]['Skills']['PlayerLevel'])
     turret_type = 'red' if profile_level >= 30 else 'normal'
@@ -202,23 +206,22 @@ def set_turrets():
         if type(options_parent[i]) == str:
             options_parent[i] = options_parent[i].upper()
     print_menu(menu_type=0)
-    for i in range(len(options)):
-        print(options[i])
+    for option in options:
+        print(option)
     choice = get_input()
     if choice == 'ESC':
         return 0
-    if choice in options_parent:
-        choice_index = options_parent.index(choice)
-        turret_id = turret_dict[turret_type][choice_index]['ID']
-        try:
-            for i in data['Inventory'][profile]['Turrets']:
-                if i['TurretId'] == turret_id:
-                    i['TurretCount'] = amount
-        except Exception:
-            data['Inventory'][profile]['Turrets'].append({'TurretId': turret_id, 'TurretCount': amount})
-        export_save(data=data)
-    else:
+    if choice not in options_parent:
         return
+    choice_index = options_parent.index(choice)
+    turret_id = turret_dict[turret_type][choice_index]['ID']
+    try:
+        for i in data['Inventory'][profile]['Turrets']:
+            if i['TurretId'] == turret_id:
+                i['TurretCount'] = amount
+    except Exception:
+        data['Inventory'][profile]['Turrets'].append({'TurretId': turret_id, 'TurretCount': amount})
+    export_save(data=data)
 
 def set_equipment_menu_2(equip_version: int, index: int):
     options = []
@@ -244,8 +247,8 @@ def set_equipment_menu_2(equip_version: int, index: int):
             options_parent[i] = options_parent[i].upper()
     options.append(f"\n[ESC] Back")
     print_menu(menu_type=0)
-    for i in range(len(options)):
-        print(options[i])
+    for option in options:
+        print(option)
     choice = get_input()
     if choice == 'ESC':
         return 0
@@ -276,8 +279,8 @@ def set_equipment(equip_version, choice_index, equipment_list):
             options_parent[i] = options_parent[i].upper()
     options.append(f"\n[ESC] Back")
     print_menu(menu_type=0)
-    for i in range(len(options)):
-        print(options[i])
+    for option in options:
+        print(option)
     choice = get_input()
     if choice == 'ESC':
         return 0
@@ -332,8 +335,8 @@ def set_guns_menu_2(gun_version: int, index: int):
             options_parent[i] = options_parent[i].upper()
     options.append(f"\n[ESC] Back")
     print_menu(menu_type=0)
-    for i in range(len(options)):
-        print(options[i])
+    for option in options:
+        print(option)
     choice = get_input()
 
     if choice == 'ESC':
@@ -366,8 +369,8 @@ def set_gun(gun_version: int, choice_index: int, guns_list: list, gun_version_in
             options_parent[i] = options_parent[i].upper()
     options.append(f"\n[ESC] Back")
     print_menu(menu_type=0)
-    for i in range(len(options)):
-        print(options[i])
+    for option in options:
+        print(option)
     choice = get_input()
     if choice == 'ESC':
         return 0

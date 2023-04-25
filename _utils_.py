@@ -63,18 +63,8 @@ def generate_menu_options(menu_dict):
     options.append(f"\n[ESC] Back")
     return "\n".join(options) # Join the list of options into a single string with newline separators
 
-def generate_menu_for_lists(option_list: list):
-    # do the same as generate_menu_option but instead of taking an input of a dictionary, take a list instead
-    for i in range(len(option_list)):
-        option_list[i] = f"[{i+1}] {option_list[i]}"
-        if i >= 9:
-            option_list[i] = f"[{chr(65 + i - 9)}] {option_list[i]}"
-        if '_' in option_list[i]:
-            option_list[i] = option_list[i].replace('_', ' ')
-    option_list.append(f"\n[ESC] Back")
-    return "\n".join(option_list)
-
 def print_menu(menu_dict: dict = None, menu_type: int = None, option_list: list = None) -> None:
+    # sourcery skip: hoist-similar-statement-from-if, hoist-statement-from-if
     main_title = f'''{Fore.RED}
                    _______   ______________          __
                   / __/ _ | / __/ / /_  __/__  ___  / /
@@ -129,16 +119,6 @@ def option_generator(menu_path: dict, functions: list):
         if return_value == 0:
             return
 
-def option_generator_for_lists(option_list: list, functions: list):
-    while True:
-        print_menu(option_list, 0)
-        choice = get_input()
-        if choice == 'esc':
-            return
-        return_value = handle_menu_option(choice, functions)
-        if return_value == 0:
-            return
-
 def import_save () -> str:
     save_bytes = b"".join( dgdata.iter_decode(save_path.open("rb")) )
     return json.loads( save_bytes )
@@ -186,21 +166,6 @@ def check_int(value) -> int:
     time.sleep(1)
     return 0
 
-def return_mapped_guns(index: int) -> int:
-    return gun_map.get(index)
-
-def return_mapped_gun_names(index: int) -> str:
-    return gun_map_names.get(index)
-
-def return_gun_category_name(index: int) -> str:
-    cat_map = {
-        0: "normal",
-        1: "red",
-        2: "black",
-        3: "factions"
-    }
-    return cat_map.get(index)
-
 gun_map = {
     0: 1,#'pistols'
     1: 2, #'smg'
@@ -246,90 +211,7 @@ gun_map_names = {
     9: 'laser',
 }
 
-menu = {
-    "Global": {
-        "Factions": {
-            "Set faction guild": {
-                    "GUARDIANS": {},
-                    "NOMADS": {},
-                    "OUTLAWS": {},
-                    "VANGUARD": {},
-                    "SPARTANS": {}
-                },
-            "Set faction credits": {
-                "Zeta credits": {},
-                "Epsilon credits": {},
-                "Sigma credits": {},
-                "Xi credits": {},
-                "Omicron credits": {},
-                "Faction credits": {},
-                "All credits": {}
-            }
-        },
-        "Premium Items": {},
-        "Revive Tokens": {},
-        "Premium nightmare tickets": {},
-        "Remove ads": {},
-        "Unlock Profile (5 & 6)": {},
-        "Unlock fairground pack": {}
-    },
-    "Profile": {
-        "Add items": {
-                "Add guns": {
-                        "Normal": {},
-                        "Red": {},
-                        "Black": {},
-                        "Factions": {}
-                    },
-                "Add equipment": {
-                        "Normal": {},
-                        "Red": {},
-                        "Black": {},
-                        "Factions": {}
-                    }
-            },
-        "Change username": {},
-        "Add SAS cash": {},
-        "Set free skill reset": {},
-        "Set profile level": {},
-        "Add black strongboxes": {},
-        "Add random strongboxes [Work in progress |  Blank]": {},
-        "Add black keys": {},
-        "Add augment cores": {},
-        "Add support items": {
-                "Add turrets": {},
-                "Add grenades": {
-                    "Frag grenade": {},
-                    "Cryo grenade": {}
-                }
-            },
-        "Set profile multiplayer stats": {
-                "MP Kills": {},
-                "MP Deaths": {},
-                "MP Games won": {},
-                "MP Games lost": {}
-            },
-        "Set profile masteries to max level": {},
-        "Unlock all collections": {
-                "With strongboxes": {},
-                "Without strongboxes": {}
-        }
-        },
-    "Options": {
-        "Change profile": {
-            "Profile 1": {},
-            "Profile 2": {},
-            "Profile 3": {},
-            "Profile 4": {},
-            "Profile 5": {},
-            "Profile 6": {}
-        },
-        "Manual edit": {
-            "Export to JSON": {},
-            "Import JSON to .save": {}
-        }
-    }
-}
+menu = {"Global":{"Factions":{"Set faction guild":{"GUARDIANS":{},"NOMADS":{},"OUTLAWS":{},"VANGUARD":{},"SPARTANS":{}},"Set faction credits":{"Zeta credits":{},"Epsilon credits":{},"Sigma credits":{},"Xi credits":{},"Omicron credits":{},"Faction credits":{},"All credits":{}}},"Premium Items":{},"Revive Tokens":{},"Premium nightmare tickets":{},"Remove ads":{},"Unlock Profile (5 & 6)":{},"Unlock fairground pack":{}},"Profile":{"Add items":{"Add guns":{"Normal":{},"Red":{},"Black":{},"Factions":{}},"Add equipment":{"Normal":{},"Red":{},"Black":{},"Factions":{}}},"Change username":{},"Add SAS cash":{},"Set free skill reset":{},"Set profile level":{},"Add black strongboxes":{},"Add random strongboxes [Work in progress |  Blank]":{},"Add black keys":{},"Add augment cores":{},"Add support items":{"Add turrets":{},"Add grenades":{"Frag grenade":{},"Cryo grenade":{}}},"Set profile multiplayer stats":{"MP Kills":{},"MP Deaths":{},"MP Games won":{},"MP Games lost":{}},"Set profile masteries to max level":{},"Unlock all collections":{"With strongboxes":{},"Without strongboxes":{}}},"Options":{"Change profile":{"Profile 1":{},"Profile 2":{},"Profile 3":{},"Profile 4":{},"Profile 5":{},"Profile 6":{}},"Manual edit":{"Export to JSON":{},"Import JSON to .save":{}}}}
 
 gunStrongbox = {
     "ID": 0,

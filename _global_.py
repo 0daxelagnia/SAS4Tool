@@ -16,7 +16,7 @@ def global_menu():
 def add_premium_guns():
     options = []
     options_parent = []
-    fixed_names = []
+    
     with open('./items.json', 'r') as f:
         data = json.load(f)
         prem_dict = data['premium_info']
@@ -25,8 +25,9 @@ def add_premium_guns():
         data = json.load(f)
         profile = data['current_profile'] 
 
-    for i in prem_dict:
-        fixed_names.append(f"sas4_{i['Name'].lower().replace('.', '').replace(' ', '')}")
+    fixed_names = [
+            f"sas4_{i['Name'].lower().replace('.', '').replace(' ', '')}"
+            for i in prem_dict]
     for i in range(len(prem_dict)):
         if i >= 9:
             options.append(f'[{chr(65 + i - 9)}] {prem_dict[i]["Name"]}')
@@ -40,8 +41,8 @@ def add_premium_guns():
             options_parent[i] = options_parent[i].upper()
     options.append(f"\n[ESC] Back")
     print_menu(menu_type=0)
-    for i in range(len(options)):
-        print(options[i])
+    for option in options:
+        print(option)
     choice = get_input()
     if choice == 'ESC':
         return 0
@@ -112,7 +113,7 @@ def unlock_profiles():
     data = import_save()
     create_backup()
     for i in range(2):
-        data['Global']['PurchasedIAP']['PurchasedIAPArray'][i]['Identifier'] = True
+        data['PurchasedIAP']['PurchasedIAPArray'][i]['Identifier'] = True
     export_save(data=data)
     return 0
 
