@@ -37,7 +37,7 @@ def loadProfile() -> tuple:
 save_path: str = get_game_save_path(loadProfile()[1])
 save_data: dict = {}
 base_path: str = getcwd()
-version: str = '3.0.1'
+version: str = '3.0.2'
 dev: str = '<\\>#0077'
 
 
