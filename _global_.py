@@ -1,33 +1,49 @@
-from _utils_ import option_generator, menu, import_save, create_backup, export_save, print_menu, check_int, get_input,gunStrongbox
-import time, json
-from colorama import Fore, init
+from _utils_ import (
+    option_generator,
+    menu,
+    import_save,
+    create_backup,
+    export_save,
+    print_menu,
+    check_int,
+    get_input,
+    gunStrongbox)
+
+from json import load
+from colorama import (
+    Fore,
+    init)
+
+
 init()
+
 
 def global_menu():
     option_generator(menu['Global'],
-                    [factions_menu,
-                    add_premium_guns,
-                    set_revive,
-                    set_nightmare,
-                    remove_ads,
-                    unlock_profiles,
-                    unlock_fairground_pack])
+                     [factions_menu,
+                      add_premium_guns,
+                      set_revive,
+                      set_nightmare,
+                      remove_ads,
+                      unlock_profiles,
+                      unlock_fairground_pack])
+
 
 def add_premium_guns():
     options = []
     options_parent = []
-    
+
     with open('./items.json', 'r') as f:
-        data = json.load(f)
+        data = load(f)
         prem_dict = data['premium_info']
-    
+
     with open('./config.json', 'r') as f:
-        data = json.load(f)
-        profile = data['current_profile'] 
+        data = load(f)
+        profile = data['current_profile']
 
     fixed_names = [
-            f"sas4_{i['Name'].lower().replace('.', '').replace(' ', '')}"
-            for i in prem_dict]
+        f"sas4_{i['Name'].lower().replace('.', '').replace(' ', '')}"
+        for i in prem_dict]
     for i in range(len(prem_dict)):
         if i >= 9:
             options.append(f'[{chr(65 + i - 9)}] {prem_dict[i]["Name"]}')
@@ -39,7 +55,7 @@ def add_premium_guns():
     for i in range(len(options_parent)):
         if type(options_parent[i]) == str:
             options_parent[i] = options_parent[i].upper()
-    options.append(f"\n[ESC] Back")
+    options.append("\n[ESC] Back")
     print_menu(menu_type=0)
     for option in options:
         print(option)
@@ -51,9 +67,10 @@ def add_premium_guns():
         gun_id = prem_dict[choice_index]['ID']
         gun_type = prem_dict[choice_index]['Type']
         gun_name = fixed_names[choice_index]
-        
+
         print_menu(menu_type=0)
-        print(f'{Fore.RED}[WARNING]{Fore.RESET} Using letters or going higher/lower will crash your game.')
+        print(
+            f'{Fore.RED}[WARNING]{Fore.RESET} Using letters or going higher/lower will crash your game.')
         bonus = int(input('Set item bonus stats [0-10]: '))
         augments = int(input('Set item augments [0-4]: '))
         grade = int(input('Set item grade [0-12]: '))
@@ -64,19 +81,20 @@ def add_premium_guns():
         strongbox['Grade'] = grade
         strongbox['AugmentSlots'] = augments
         strongbox['InventoryIndex'] = gun_type
-        
+
         data = import_save()
         create_backup()
         data['Inventory'][profile]['Strongboxes']['Claimed'].append(0)
         data['Inventory'][profile]['Strongboxes']['Claimed'].append(strongbox)
         data['Inventory'][profile]['Strongboxes']['Claimed'].append(8)
         data['Inventory'][profile]['Strongboxes']['Claimed'].append(0)
-        
+
         for i in range(len(data['PurchasedIAP']['PurchasedIAPArray'])):
             if data['PurchasedIAP']['PurchasedIAPArray'][i]['Identifier'] == gun_name:
                 data['PurchasedIAP']['PurchasedIAPArray'][i]['Value'] = True
         export_save(data=data)
         return 0
+
 
 def unlock_fairground_pack():
     data = import_save()
@@ -86,28 +104,32 @@ def unlock_fairground_pack():
     export_save(data=data)
     return 0
 
+
 def factions_menu():
     option_generator(menu['Global']['Factions'],
-                    [set_faction_guild,
-                    set_faction_credits])
+                     [set_faction_guild,
+                     set_faction_credits])
+
 
 def set_faction_guild():
     option_generator(menu["Global"]["Factions"]["Set faction guild"],
-                    [lambda: set_guild("GUARDIANS"),
-                    lambda: set_guild("NOMADS"),
-                    lambda: set_guild("OUTLAWS"),
-                    lambda: set_guild("VANGUARD"),
-                    lambda: set_guild("SPARTANS")])
+                     [lambda: set_guild("GUARDIANS"),
+                     lambda: set_guild("NOMADS"),
+                     lambda: set_guild("OUTLAWS"),
+                     lambda: set_guild("VANGUARD"),
+                     lambda: set_guild("SPARTANS")])
+
 
 def set_faction_credits():
     option_generator(menu["Global"]["Factions"]["Set faction credits"],
-                    [lambda: set_credits('Zeta credits', 0),
-                    lambda: set_credits('Epsilon credits', 1),
-                    lambda: set_credits('Sigma credits', 2),
-                    lambda: set_credits('Xi credits', 3),
-                    lambda: set_credits('Omicron credits', 4),
-                    lambda: set_credits('Faction credits', 0),
-                    lambda: set_credits('All credits', 0)])
+                     [lambda: set_credits('Zeta credits', 0),
+                     lambda: set_credits('Epsilon credits', 1),
+                     lambda: set_credits('Sigma credits', 2),
+                     lambda: set_credits('Xi credits', 3),
+                     lambda: set_credits('Omicron credits', 4),
+                     lambda: set_credits('Faction credits', 0),
+                     lambda: set_credits('All credits', 0)])
+
 
 def unlock_profiles():
     data = import_save()
@@ -117,6 +139,7 @@ def unlock_profiles():
     export_save(data=data)
     return 0
 
+
 def remove_ads():
     data = import_save()
     create_backup()
@@ -124,14 +147,17 @@ def remove_ads():
     export_save(data=data)
     return 0
 
+
 def set_nightmare():
     print_menu(menu_dict={}, menu_type=0)
-    nightmare_tokens = check_int(int(input('Set nightmare tokens amount\n\n[ > ] ')))
+    nightmare_tokens = check_int(
+        int(input('Set nightmare tokens amount\n\n[ > ] ')))
     data = import_save()
     create_backup()
     data['Global']['AvailablePremiumTickets'] = nightmare_tokens
     export_save(data=data)
     return 0
+
 
 def set_revive():
     print_menu(menu_dict={}, menu_type=0)
@@ -142,8 +168,9 @@ def set_revive():
     export_save(data=data)
     return 0
 
+
 def set_credits(credit_type: str, planet_index: int):
-    print_menu(menu_dict={},menu_type=0)
+    print_menu(menu_dict={}, menu_type=0)
     credits = check_int(int(input(f'Set your {credit_type}\n\n[ > ] ')))
     data = import_save()
     create_backup()
@@ -158,6 +185,7 @@ def set_credits(credit_type: str, planet_index: int):
         data['FactionWarPlanetArray'][planet_index]['Currency'] = credits
     export_save(data=data)
     return 0
+
 
 def set_guild(guild: str):
     data = import_save()

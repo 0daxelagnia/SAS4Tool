@@ -1,11 +1,13 @@
 from _utils_ import option_generator, menu, import_json_to_save, create_json_save
 import json
 
+
 def options_menu():
     option_generator(menu["Options"], [
         change_profile,
         manual_edit
     ])
+
 
 def change_profile():
     option_generator(menu["Options"]["Change profile"], [
@@ -17,11 +19,13 @@ def change_profile():
         lambda: set_profile("Profile5")
     ])
 
+
 def manual_edit():
     option_generator(menu["Options"]["Manual edit"], [
         create_json_save,
         import_json_to_save
     ])
+
 
 def set_profile(profile):
     with open('.\\config.json', 'r+') as f:
