@@ -1,0 +1,7 @@
+codecs7z==0.0.1.0
+colorama==0.4.6
+numpy==1.24.3
+pywin32==306
+steamid-converter==1.0.1
+typing_extensions==4.5.0
+vdf==3.4
