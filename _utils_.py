@@ -19,9 +19,9 @@ def loadProfile() -> tuple:
         id = int(input('Paste your Steam ID: '))
         with open('config.json', 'w') as f:
             data: dict = {
-                'current_profile': 'Profile0',
-                'steam_user_id': id
-            }
+        'current_profile': 'Profile0',
+        'steam_user_id': id
+    }
             dump(data, f, indent=4)
     with open('.\config.json', 'r') as f:
         data: dict = load(f)

@@ -102,8 +102,8 @@ def set_mp_stats(stat_type: str):
             stat_index = data['Inventory'][profile]['StatsData'].index(i)
     try:
         data['Inventory'][profile]['StatsData'][stat_index]['val'] = amount
-    except Exception:
-        data['Inventory'][profile]['StatsData'][stat_index]['val'].append(
+    except:
+        data['Inventory'][profile]['StatsData'].append(
             {'key': stat_type, 'val': amount})
     export_save(data=data)
     return 0
@@ -112,7 +112,7 @@ def set_mp_stats(stat_type: str):
 def support_menu():
     option_generator(menu["Profile"]["Add support items"],
                      [set_turrets,
-                     set_grenades])
+                     grenades_menu])
 
 
 def grenades_menu():
@@ -352,7 +352,7 @@ def set_turrets():
         for i in data['Inventory'][profile]['Turrets']:
             if i['TurretId'] == turret_id:
                 i['TurretCount'] = amount
-    except Exception:
+    except:
         data['Inventory'][profile]['Turrets'].append(
             {'TurretId': turret_id, 'TurretCount': amount})
     export_save(data=data)
