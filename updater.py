@@ -15,10 +15,14 @@ releases_url: str = f'https://github.com/0daxelagnia/SAS4Tool/releases/download/
 def check_py_updater_ver():
     updater_content = requests.get('https://raw.githubusercontent.com/0daxelagnia/SAS4Tool/main/updater.py')
     open('updater.tmp', 'wb').write(updater_content.text.encode('utf-8'))
-    if filecmp.cmp('updater.py', 'updater.tmp'):
-        print('file is the same')
-    else:
-        print('file is not the same')
+    file_self = os.path.join('.', 'updater.py')
+    temp_file = os.path.join('.', 'updater.tmp')
+    
+    py_file_size = file_self.__sizeof__()
+    tmp_file_size = temp_file.__sizeof__() - 1
+    
+    if py_file_size == tmp_file_size:
+        print('file is the same!')
 
 
 def check_compiled_updater_ver():
