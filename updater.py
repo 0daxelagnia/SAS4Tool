@@ -13,8 +13,8 @@ gh_items: str = 'https://raw.githubusercontent.com/0daxelagnia/SAS4Tool/main/ite
 releases_url: str = f'https://github.com/0daxelagnia/SAS4Tool/releases/download/{latest}/'
 
 def check_py_updater_ver():
-    updater_content: str = 'https://github.com/0daxelagnia/SAS4Tool/blob/main/updater.py'
-    open('updater.tmp', 'wb').write(requests.get(updater_content).content)
+    updater_content = requests.get('https://raw.githubusercontent.com/0daxelagnia/SAS4Tool/main/updater.py')
+    open('updater.tmp', 'wb').write(updater_content.text.encode('utf-8'))
     if filecmp.cmp('updater.py', 'updater.tmp'):
         print('file is the same')
     else:
