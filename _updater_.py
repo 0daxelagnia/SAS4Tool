@@ -4,7 +4,7 @@ import requests
 import subprocess
 from typing import List
 
-check_list: List[str] = ['items.json', 'main.py', '_utils_.py', '_profile_.py', '_global_.py', '_options_.py', 'start.bat']
+check_list: List[str] = ['items.json', 'main.py', '_utils_.py', '_profile_.py', '_global_.py', '_options_.py', 'start.bat', 'update.bat']
 repository_url: str = 'https://raw.githubusercontent.com/0daxelagnia/SAS4Tool/main/{}'
 
 def return_file_path(filename: str) -> str:
