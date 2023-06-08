@@ -2,19 +2,22 @@ import os
 import json
 import requests
 import subprocess
-import shutil
 
-check_list: list = ['items.json', 'main.py', '_utils_.py', '_profile_.py', '_global_.py', '_options_.py', ]
+check_list: list = ['items.json', 'main.py', '_utils_.py', '_profile_.py', '_global_.py', '_options_.py', 'start.bat']
 repository_url: str = 'https://raw.githubusercontent.com/0daxelagnia/SAS4Tool/main/{}'
-
-
 def return_file_path(filename: str) -> str:
     return os.path.join(f'{os.getcwd()}', f'{filename}')
 
 
 def check_updater_is_on():
-    with open(return_file_path('config.json'), 'r') as f:
-        data: str = json.load(f)
+    try:
+        with open(return_file_path('config.json'), 'r') as f:
+            data: str = json.load(f)
+    except FileNotFoundError:
+        with open(return_file_path('config.json'), 'w') as f:
+            id = input('Right click to paste your Steam user id: ')
+            json.dump({'current_profile': 'Profile0', 'steam_user_id': id, 'updater': True}, f, indent=4)
+        return True
     return True if data['updater'] else 0
 
 
