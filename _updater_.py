@@ -1,7 +1,7 @@
 import os
 import json
 import requests
-
+import subprocess
 
 check_list: list = ['items.json', 'main.py', '_utils_.py', '_profile_.py', '_global_.py', '_options_.py', ]
 repository_url: str = 'https://raw.githubusercontent.com/0daxelagnia/SAS4Tool/main/{}'
@@ -28,7 +28,7 @@ def download_missing_files(files: list) -> int:
     for i in files:
         file_name = os.path.basename(i)
         url = repository_url.format(f'{file_name}')
-        r: str = requests.get(url).text.replace('\n', '')
+        r: str = requests.get(url).text.replace('\n', '\r')
         with open(return_file_path(file_name), 'w') as f:
             f.write(r)
         print(f'File {file_name} successfully downloaded.')
@@ -36,9 +36,6 @@ def download_missing_files(files: list) -> int:
 
 
 def update_old_files(files: list):
-    
-    updated_files = []
-    
     for i in files:
         dir_file = return_file_path(i)
         file_name = os.path.basename(i)
@@ -51,11 +48,12 @@ def update_old_files(files: list):
         print(f'Updating {dir_file}...')
         with open(dir_file, 'w') as f:
             f.write(r.replace('\n', ''))
-        updated_files.append(file_name)
     print('Done!')
+
 
 if __name__ == '__main__':
     if not check_updater_is_on():
+        subprocess.Popen(['cmd', '/c', 'start.bat'], creationflags=subprocess.CREATE_NEW_CONSOLE)
         exit()
     print('Checking missing files...')
     missing_files = check_missing_files()
@@ -67,4 +65,6 @@ if __name__ == '__main__':
         print('No files missing.')
     print('Checking for outdated files...')
     update_old_files(check_list)
-# download_missing_files(check_missing_files())
+    print('All files are up to date!\nLaunching main.py...')
+    subprocess.Popen(['cmd', '/c', 'start.bat'], creationflags=subprocess.CREATE_NEW_CONSOLE)
+    exit()
