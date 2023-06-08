@@ -10,6 +10,7 @@ from shutil import copyfile
 from tkinter import Tk
 from tkinter import filedialog
 from ctypes import windll
+from subprocess import Popen, CREATE_NEW_CONSOLE
 
 init()
 
@@ -18,6 +19,11 @@ base_path: str = getcwd()
 save_data: dict = {}
 version: str = '3.0.3'
 dev: str = '<\\>#0077'
+
+
+def check_updates():
+    Popen(['cmd', '/c', 'update.bat'], creationflags=CREATE_NEW_CONSOLE)
+    exit()
 
 
 def loadProfile() -> tuple:
@@ -230,8 +236,7 @@ gun_map_names = {
     9: 'laser',
 }
 
-menu = {"Global": {"Factions": {"Set faction guild": {"GUARDIANS": {}, "NOMADS": {}, "OUTLAWS": {}, "VANGUARD": {}, "SPARTANS": {}}, "Set faction credits": {"Zeta credits": {}, "Epsilon credits": {}, "Sigma credits": {}, "Xi credits": {}, "Omicron credits": {}, "Faction credits": {}, "All credits": {}}}, "Premium Items": {}, "Revive Tokens": {}, "Premium nightmare tickets": {}, "Remove ads": {}, "Unlock Profile (5 & 6)": {}, "Unlock fairground pack": {}}, "Profile": {"Add items": {"Add guns": {"Normal": {}, "Red": {}, "Black": {}, "Factions": {}}, "Add equipment": {"Normal": {}, "Red": {}, "Black": {}, "Factions": {}}}, "Change username": {}, "Add SAS cash": {}, "Set free skill reset": {
-}, "Set profile level": {}, "Add black strongboxes": {}, "Add random strongboxes [Work in progress |  Blank]": {}, "Add black keys": {}, "Add augment cores": {}, "Add support items": {"Add turrets": {}, "Add grenades": {"Frag grenade": {}, "Cryo grenade": {}}}, "Set profile multiplayer stats": {"MP Kills": {}, "MP Deaths": {}, "MP Games won": {}, "MP Games lost": {}}, "Set profile masteries to max level": {}, "Unlock all collections": {"With strongboxes": {}, "Without strongboxes": {}}}, "Options": {"Change profile": {"Profile 1": {}, "Profile 2": {}, "Profile 3": {}, "Profile 4": {}, "Profile 5": {}, "Profile 6": {}}, "Manual edit": {"Export to JSON": {}, "Import JSON to .save": {}}}}
+menu = {"Global":{"Factions":{"Set faction guild":{"GUARDIANS":{},"NOMADS":{},"OUTLAWS":{},"VANGUARD":{},"SPARTANS":{}},"Set faction credits":{"Zeta credits":{},"Epsilon credits":{},"Sigma credits":{},"Xi credits":{},"Omicron credits":{},"Faction credits":{},"All credits":{}}},"Premium Items":{},"Revive Tokens":{},"Premium nightmare tickets":{},"Remove ads":{},"Unlock Profile (5 & 6)":{},"Unlock fairground pack":{}},"Profile":{"Add items":{"Add guns":{"Normal":{},"Red":{},"Black":{},"Factions":{}},"Add equipment":{"Normal":{},"Red":{},"Black":{},"Factions":{}}},"Change username":{},"Add SAS cash":{},"Set free skill reset":{},"Set profile level":{},"Add black strongboxes":{},"Add random strongboxes [Work in progress |  Blank]":{},"Add black keys":{},"Add augment cores":{},"Add support items":{"Add turrets":{},"Add grenades":{"Frag grenade":{},"Cryo grenade":{}}},"Set profile multiplayer stats":{"MP Kills":{},"MP Deaths":{},"MP Games won":{},"MP Games lost":{}},"Set profile masteries to max level":{},"Unlock all collections":{"With strongboxes":{},"Without strongboxes":{}}},"Options":{"Change profile":{"Profile 1":{},"Profile 2":{},"Profile 3":{},"Profile 4":{},"Profile 5":{},"Profile 6":{}},"Manual edit":{"Export to JSON":{},"Import JSON to .save":{}},"Check for updates":{}}}
 
 gunStrongbox = {
     "ID": 0,

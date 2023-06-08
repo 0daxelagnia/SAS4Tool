@@ -14,7 +14,7 @@ def check_updater_is_on() -> bool:
     config_file_path = return_file_path('config.json')
     if not os.path.exists(config_file_path):
         with open(config_file_path, 'w') as f:
-            id = input('Right click to paste your Steam user id: ')
+            id: int = int(input('Right click to paste your Steam user id: '))
             json.dump({'current_profile': 'Profile0', 'steam_user_id': id, 'updater': True}, f, indent=4)
         return True
     else:
@@ -30,21 +30,21 @@ def check_missing_files() -> List[str]:
 
 def download_missing_files(files: List[str]) -> None:
     for i in files:
-        file_name = os.path.basename(i)
-        url = repository_url.format(f'{file_name}')
-        r = requests.get(url).content
+        file_name: str = os.path.basename(i)
+        url: str = repository_url.format(f'{file_name}')
+        r: bytes = requests.get(url).content
         with open(return_file_path(file_name), 'wb') as f:
             f.write(r)
         print(f'File {file_name} successfully downloaded.')
 
 def update_old_files(files: List[str]) -> None:
     for i in files:
-        dir_file = return_file_path(i)
-        file_name = os.path.basename(i)
-        url = repository_url.format(f'{file_name}')
-        r = requests.get(url).content
+        dir_file: str = return_file_path(i)
+        file_name: str = os.path.basename(i)
+        url: str = repository_url.format(f'{file_name}')
+        r: bytes = requests.get(url).content
         with open(dir_file, 'rb') as f:
-            data = f.read()
+            data: bytes = f.read()
             if data == r:
                 continue
         print(f'Updating {dir_file}...')

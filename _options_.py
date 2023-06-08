@@ -1,10 +1,11 @@
-from _utils_ import option_generator, menu, import_json_to_save, create_json_save, base_path
+from _utils_ import option_generator, menu, import_json_to_save, create_json_save, base_path, check_updates
 from json import load, dump
 
 def options_menu():
     option_generator(menu["Options"], [
         change_profile,
-        manual_edit
+        manual_edit,
+        check_updates
     ])
 
 
