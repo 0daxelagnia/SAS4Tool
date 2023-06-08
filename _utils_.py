@@ -9,21 +9,20 @@ from datetime import datetime
 from shutil import copyfile
 from tkinter import Tk
 from tkinter import filedialog
+from ctypes import windll
 
 init()
 
 
+base_path: str = getcwd()
+save_data: dict = {}
+version: str = '3.0.3'
+dev: str = '<\\>#0077'
+
+
 def loadProfile() -> tuple:
     _sys('cls' if _name == 'nt' else 'clear')
-    if not _path.exists('.\config.json'):
-        id = int(input('Paste your Steam ID: '))
-        with open('config.json', 'w') as f:
-            data: dict = {
-        'current_profile': 'Profile0',
-        'steam_user_id': id
-    }
-            dump(data, f, indent=4)
-    with open('.\config.json', 'r') as f:
+    with open(f'{base_path}\\config.json', 'r') as f:
         data: dict = load(f)
         if data['steam_user_id'] is not None:
             STEAM_USER_ID: str = data['steam_user_id']
@@ -35,10 +34,10 @@ def loadProfile() -> tuple:
 
 
 save_path: str = get_game_save_path(loadProfile()[1])
-save_data: dict = {}
-base_path: str = getcwd()
-version: str = '3.0.2'
-dev: str = '<\\>#0077'
+
+
+def cmd_title(title: str) -> None:
+    return windll.kernel32.SetConsoleTitleW(f'SAS4Tool ver. {version} | {title}')
 
 
 def clear_screen():
@@ -60,7 +59,7 @@ def get_input() -> (int | str):
 
 
 def generate_menu_options(menu_dict):
-    options = []
+    options: list = []
     for index, (key, value) in enumerate(menu_dict.items()):
         if index >= 9:  # If index is greater than or equal to 9, use letters for options
             # Determine letter option using chr() and ASCII codes for capital letters
@@ -71,11 +70,10 @@ def generate_menu_options(menu_dict):
             options.append(
                 f"[{index+1}] {(key.capitalize()).replace('_', ' ')}")
     options.append("\n[ESC] Back")
-    # Join the list of options into a single string with newline separators
     return "\n".join(options)
 
 
-def print_menu(menu_dict: dict = None, menu_type: int = None, option_list: list = None) -> None:
+def print_menu(menu_dict: dict = None, menu_type: int = None) -> None:
     main_title = f'''{Fore.RED}
                    _______   ______________          __
                   / __/ _ | / __/ / /_  __/__  ___  / /

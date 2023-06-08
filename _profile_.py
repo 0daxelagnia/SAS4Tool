@@ -8,7 +8,9 @@ from _utils_ import (option_generator,
                      get_input,
                      gunStrongbox,
                      equipStrongbox,
-                     equip_map)
+                     equip_map,
+                     cmd_title,
+                     base_path)
 from json import load
 from colorama import Fore, init
 from random import randint
@@ -16,12 +18,13 @@ init()
 
 
 def profile_menu():
-    with open('./config.json') as f:
+    cmd_title('Profile menu')
+    with open(f'{base_path}\\config.json') as f:
         data = load(f)
         global profile  # Set the current profile value to a global variable
         profile = data['current_profile']
 
-    with open('./items.json', 'r') as f:
+    with open(f'{base_path}\\items.json', 'r') as f:
         data = load(f)
         global gun_dict  # Set the guns dictionary to a global variable
         global equip_dict  # Set the equipment dictionary to a global variable

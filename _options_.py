@@ -1,6 +1,5 @@
-from _utils_ import option_generator, menu, import_json_to_save, create_json_save
-import json
-
+from _utils_ import option_generator, menu, import_json_to_save, create_json_save, base_path
+from json import load, dump
 
 def options_menu():
     option_generator(menu["Options"], [
@@ -28,10 +27,11 @@ def manual_edit():
 
 
 def set_profile(profile):
-    with open('.\\config.json', 'r+') as f:
-        data = json.load(f)
+    with open(f'{base_path}\\config.json', 'r+') as f:
+        data = load(f)
         data['current_profile'] = profile
         f.seek(0)
-        json.dump(data, f, indent=4)
+        dump(data, f, indent=4)
         f.truncate()
     return
+

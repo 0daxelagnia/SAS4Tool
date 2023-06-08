@@ -7,7 +7,8 @@ from _utils_ import (
     print_menu,
     check_int,
     get_input,
-    gunStrongbox)
+    gunStrongbox,
+    base_path)
 
 from json import load
 from colorama import (
@@ -33,11 +34,11 @@ def add_premium_guns():
     options = []
     options_parent = []
 
-    with open('./items.json', 'r') as f:
+    with open(f'{base_path}\\items.json', 'r') as f:
         data = load(f)
         prem_dict = data['premium_info']
 
-    with open('./config.json', 'r') as f:
+    with open(f'{base_path}\\config.json', 'r') as f:
         data = load(f)
         profile = data['current_profile']
 
@@ -135,7 +136,7 @@ def unlock_profiles():
     data = import_save()
     create_backup()
     for i in range(2):
-        data['PurchasedIAP']['PurchasedIAPArray'][i]['Identifier'] = True
+        data['PurchasedIAP']['PurchasedIAPArray'][i]['Value'] = True
     export_save(data=data)
     return 0
 
