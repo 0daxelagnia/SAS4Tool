@@ -11,15 +11,16 @@ def return_file_path(filename: str) -> str:
     return os.path.join(f'{os.getcwd()}', f'{filename}')
 
 def check_updater_is_on() -> bool:
-    try:
-        with open(return_file_path('config.json'), 'r') as f:
-            data: dict = json.load(f)
-    except FileNotFoundError:
-        with open(return_file_path('config.json'), 'w') as f:
+    config_file_path = return_file_path('config.json')
+    if not os.path.exists(config_file_path):
+        with open(config_file_path, 'w') as f:
             id = input('Right click to paste your Steam user id: ')
             json.dump({'current_profile': 'Profile0', 'steam_user_id': id, 'updater': True}, f, indent=4)
         return True
-    return data['updater']
+    else:
+        with open(config_file_path, 'r') as f:
+            data: dict = json.load(f)
+        return data['updater']
 
 def check_missing_files() -> List[str]:
     return [return_file_path(i)
@@ -31,8 +32,8 @@ def download_missing_files(files: List[str]) -> None:
     for i in files:
         file_name = os.path.basename(i)
         url = repository_url.format(f'{file_name}')
-        r = requests.get(url).text.replace('\r\n', '\n')
-        with open(return_file_path(file_name), 'w') as f:
+        r = requests.get(url).content
+        with open(return_file_path(file_name), 'wb') as f:
             f.write(r)
         print(f'File {file_name} successfully downloaded.')
 
@@ -41,13 +42,13 @@ def update_old_files(files: List[str]) -> None:
         dir_file = return_file_path(i)
         file_name = os.path.basename(i)
         url = repository_url.format(f'{file_name}')
-        r = requests.get(url).text.replace('\r\n', '\n')
-        with open(dir_file, 'r') as f:
+        r = requests.get(url).content
+        with open(dir_file, 'rb') as f:
             data = f.read()
             if data == r:
                 continue
         print(f'Updating {dir_file}...')
-        with open(dir_file, 'w') as f:
+        with open(dir_file, 'wb') as f:
             f.write(r)
 
 if __name__ == '__main__':
