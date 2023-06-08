@@ -47,7 +47,7 @@ def update_old_files(files: list):
                 continue
         print(f'Updating {dir_file}...')
         with open(dir_file, 'w') as f:
-            f.write(r.replace('\n', ''))
+            f.write(r)
     print('Done!')
 
 
