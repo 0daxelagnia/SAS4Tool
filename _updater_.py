@@ -2,6 +2,7 @@ import os
 import json
 import requests
 import subprocess
+import shutil
 
 check_list: list = ['items.json', 'main.py', '_utils_.py', '_profile_.py', '_global_.py', '_options_.py', ]
 repository_url: str = 'https://raw.githubusercontent.com/0daxelagnia/SAS4Tool/main/{}'
@@ -28,7 +29,7 @@ def download_missing_files(files: list) -> int:
     for i in files:
         file_name = os.path.basename(i)
         url = repository_url.format(f'{file_name}')
-        r: str = requests.get(url).text.replace('\n', '\r')
+        r = requests.get(url, stream=True).text.replace('\r\n', '\n')
         with open(return_file_path(file_name), 'w') as f:
             f.write(r)
         print(f'File {file_name} successfully downloaded.')
@@ -40,7 +41,7 @@ def update_old_files(files: list):
         dir_file = return_file_path(i)
         file_name = os.path.basename(i)
         url = repository_url.format(f'{file_name}')
-        r = requests.get(url).text
+        r = requests.get(url).text.replace('\r\n', '\n')
         with open(dir_file, 'r') as f:
             data = f.read()
             if data == r:
@@ -48,7 +49,6 @@ def update_old_files(files: list):
         print(f'Updating {dir_file}...')
         with open(dir_file, 'w') as f:
             f.write(r)
-    print('Done!')
 
 
 if __name__ == '__main__':
